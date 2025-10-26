@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eleftherios Asiminaris - CV</title>
+  <meta name="description" content="Portfolio and CV of Your Name." />
+  <meta property="og:title" content="Your Name — Personal Site" />
+  <meta property="og:description" content="Portfolio and CV of Your Name." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    :root{
+      --bg: #ffffff; --fg:#111111; --muted:#666; --link:#0b57d0; --card:#f7f7f8;
+      --maxw: 920px; --pad: 1.25rem; --radius: 14px; --border:#e7e7ea;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#0b0b0c; --fg:#eaeaea; --muted:#9a9aa2; --link:#8ab4f8; --card:#141416; --border:#242428; }
+      img{ filter: brightness(0.95) contrast(1.05); }
+    }
+    html{ scroll-behavior: smooth; }
+    body{ margin:0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; background:var(--bg); color:var(--fg); }
+    .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
+    header.site{ position: sticky; top:0; backdrop-filter: blur(8px); background: color-mix(in oklab, var(--bg) 86%, transparent); border-bottom: 1px solid var(--border); z-index: 10; }
+    .nav{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding: .6rem 0; }
+    .brand{ font-weight:700; letter-spacing:.2px; }
+    .nav a{ color:var(--link); text-decoration:none; margin:0 .35rem; font-size:.95rem; }
+    .hero{ padding: 3.5rem 0 2rem; display:grid; grid-template-columns: 1.2fr .8fr; gap:2rem; align-items:center; }
+    .hero h1{ font-size: clamp(1.8rem, 3.2vw + .5rem, 3rem); line-height:1.1; margin:0 0 .6rem; }
+    .hero p{ margin:.35rem 0; color:var(--muted); }
+    .btnrow{ display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1rem; }
+    .btn{ display:inline-block; padding:.6rem .9rem; border:1px solid var(--border); border-radius: 999px; text-decoration:none; color:var(--fg); background:var(--card); }
+    .avatar{ width: 160px; height:160px; border-radius: 50%; object-fit: cover; border:1px solid var(--border); }
+
+    section{ padding: 2rem 0; }
+    h2{ margin: 0 0 .8rem; font-size: 1.4rem; }
+    .grid{ display:grid; gap:1rem; }
+    .card{ border:1px solid var(--border); background:var(--card); border-radius: var(--radius); padding:1rem; }
+    .row{ display:grid; grid-template-columns: 1fr auto; gap:.5rem; align-items:start; }
+    .where{ color:var(--muted); font-size:.95rem; }
+    .muted{ color:var(--muted); }
+    ul.clean{ padding-left: 1.2rem; margin:.4rem 0 0; }
+    footer{ border-top:1px solid var(--border); color:var(--muted); padding: 2rem 0; font-size:.95rem; }
+
+    .kpis{ display:grid; gap:.75rem; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); }
+    .kpi{ padding:1rem; border:1px dashed var(--border); border-radius: var(--radius); }
+
+    @media (max-width: 880px){
+      .hero{ grid-template-columns: 1fr; text-align:left; }
+      .hero .aside{ order:-1; }
+      .nav{ flex-wrap:wrap; }
+    }
+    a.skip{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+    a.skip:focus{ position:static; width:auto; height:auto; padding:.5rem; background:var(--card); border:1px solid var(--border); border-radius:8px; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+  <header class="site">
+    <div class="wrap nav">
+      <div class="brand">Your Name</div>
+      <nav aria-label="Primary">
+        <a href="#intro">Intro</a>
+        <a href="#work">Work</a>
+        <a href="#education">Education</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section id="intro" class="hero">
+      <div>
+        <h1>Hey, I'm <span class="brand">Your Name</span>.</h1>
+        <p class="muted">A short one‑liner about your role and interests (e.g., Lecturer in CSE and AI/ML researcher).</p>
+        <div class="btnrow">
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn" href="cv.pdf">Download CV</a>
+          <a class="btn" href="https://github.com/your-username" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/your-handle/" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="aside" aria-hidden="true">
+        <img class="avatar" src="avatar.jpg" alt="Portrait of Your Name"/>
+      </div>
+    </section>
+
+    <section id="work">
+      <h2>Experience</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="row">
+            <div>
+              <strong>Role Title</strong> · <span class="where">Company · City</span>
+            </div>
+            <div class="muted">May 2023 – Present</div>
+          </div>
+          <ul class="clean">
+            <li>One line about what you did and the impact.</li>
+            <li>Another concise bullet with verbs and outcomes.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="row">
+            <div>
+              <strong>Earlier Role</strong> · <span class="where">Org · Remote</span>
+            </div>
+            <div class="muted">2021 – 2023</div>
+          </div>
+          <ul class="clean">
+            <li>Short and skimmable points.</li>
+            <li>Quantify when possible.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="row">
+            <div>
+              <strong>BSc in Something</strong> · <span class="where">University Name</span>
+            </div>
+            <div class="muted">2019 – 2025</div>
+          </div>
+          <p class="muted">Optional: GPA, awards, relevant coursework.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <div class="grid">
+        <article class="card">
+          <strong>Paper Title Goes Here</strong>
+          <p class="muted">Conference · Month YYYY</p>
+          <p>One sentence summary of the contribution. <a href="#">View</a></p>
+        </article>
+        <article class="card">
+          <strong>Another Publication</strong>
+          <p class="muted">Journal/Preprint · YYYY</p>
+          <p>Short summary, with external link if available. <a href="#">View</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <strong>Project Name</strong>
+          <p class="muted">Stack: Python, OpenCV</p>
+          <p>One‑liner about what it does and why it’s cool. <a href="#">GitHub</a> · <a href="#">Demo</a></p>
+        </article>
+        <article class="card">
+          <strong>Another Project</strong>
+          <p class="muted">Stack: JS, Firebase, TailwindCSS</p>
+          <p>Brief description with links. <a href="#">GitHub</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="achievements">
+      <h2>Achievements</h2>
+      <div class="kpis">
+        <div class="kpi"><strong>Top Performer</strong><br><span class="muted">Program / Year</span></div>
+        <div class="kpi"><strong>Finalist</strong><br><span class="muted">Competition / Year</span></div>
+        <div class="kpi"><strong>Test Scores</strong><br><span class="muted">GRE/IELTS etc.</span></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Email: <a href="mailto:you@example.com">you@example.com</a> · <a href="https://linkedin.com/in/your-handle">LinkedIn</a> · <a href="https://github.com/your-username">GitHub</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © <span id="y"></span> Your Name. Built with pure HTML/CSS on GitHub Pages.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
